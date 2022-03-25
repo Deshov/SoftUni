@@ -1,0 +1,82 @@
+function greet(input){
+   
+  let fruit=input[0];
+  let day=input[1];
+  let qty=Number(input[2]);
+  let total=0;
+  let isTrue=true;
+  
+  switch (day) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+    case "Thursday":
+    case "Friday":
+      switch (fruit) {
+        case "banana":
+          total=qty*2.50
+          break;
+        case "apple":
+          total=qty*1.20
+          break;
+        case "orange":
+          total=qty*0.85
+          break;
+        case "grapefruit":
+          total=qty*1.45
+          break;
+        case "kiwi":
+          total=qty*2.70
+          break;
+        case "pineapple":
+          total=qty*5.50
+          break;
+        case "grapes":
+          total=qty*3.85
+          break;
+          default:
+            isTrue=false;
+            console.log("error");
+            break;
+      }   
+      break;
+  
+    case "Saturday":
+    case "Sunday":
+      switch (fruit) {
+        case "banana":
+          total=qty*2.70
+          break;
+        case "apple":
+          total=qty*1.25
+          break;
+        case "orange":
+          total=qty*0.90
+          break;
+        case "grapefruit":
+          total=qty*1.60
+          break;
+        case "kiwi":
+          total=qty*3
+          break;
+        case "pineapple":
+          total=qty*5.60
+          break;
+        case "grapes":
+          total=qty*4.2
+          break;
+          default:
+            isTrue=false;
+            console.log("error");
+            break;    
+      }   
+      break;
+
+      default:
+        isTrue=false;
+        console.log("error");
+        break;
+  }
+  if(isTrue)
+  console.log(total.toFixed(2));
+}

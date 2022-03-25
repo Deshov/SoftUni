@@ -1,0 +1,4 @@
+function solve(input){
+    let gr= Number(input[0]);
+    console.log(gr*180/Math.PI);
+}

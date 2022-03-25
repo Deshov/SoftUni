@@ -1,0 +1,20 @@
+function greet(input){
+    
+    let budjet=Number(input[0]);
+    let v=Number(input[1]);
+    let p=Number(input[2]);
+    let r=Number(input[3]);
+    
+   let total=v*250+p*(v*250*0.35)+r*(v*250*0.1)
+
+   if(v>p){
+     total=total*0.85
+   }
+
+   let diff=Math.abs(budjet-total).toFixed(2)
+   if(budjet>=total){
+     console.log(`You have ${diff} leva left!`);
+   }else{
+     console.log(`Not enough money! You need ${diff} leva more!`);
+   }
+}

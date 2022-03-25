@@ -1,0 +1,17 @@
+function greet(input){
+   
+  let numb=Number(input[0]);
+
+  switch (numb) {
+    case 0:
+      
+      break;
+  
+    default:
+      if(numb<100||numb>200){
+        console.log("invalid");
+      }
+      break;
+  }
+  
+}

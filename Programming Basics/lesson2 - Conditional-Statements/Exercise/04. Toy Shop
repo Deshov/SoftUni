@@ -1,0 +1,26 @@
+function greet(input){
+    
+    let ekskurziq=Number(input[0]);
+    let puzel=Number(input[1]);
+    let kukla=Number(input[2]);
+    let meche=Number(input[3]);
+    let minion=Number(input[4]);
+    let kamion=Number(input[5]);
+    
+    let sum=(puzel*2.60+kukla*3+meche*4.10+minion*8.20+kamion*2).toFixed(2)
+    let count=puzel+kukla+meche+minion+kamion
+
+    if(count>=50){
+      sum=sum*0.75
+    }
+
+    sum=sum*0.9;
+
+    let diff=Math.abs(sum-ekskurziq).toFixed(2);
+
+    if(sum>=ekskurziq){
+      console.log(`Yes! ${diff} lv left.`);
+    }else{
+      console.log(`Not enough money! ${diff} lv needed.`);
+    }
+}

@@ -1,0 +1,64 @@
+function greet(input){
+   
+  let town=input[0];
+ 
+  let sales=Number(input[1]);
+  let total=0;
+  isTrue=true;
+
+  switch (town) {
+    case "Sofia":
+      if (sales<0){
+        isTrue=false;
+        console.log("error");
+      }else if (sales>=0&&sales<=500) {
+        total=sales*0.05;
+      }else if(sales<=1000){
+        total=sales*0.07;
+      }else if(sales<=10000){
+        total=sales*0.08;
+      }else {
+        total=sales*0.12;
+      }
+      break;
+        
+    case "Varna":
+      if (sales<0){
+        isTrue=false;
+        console.log("error");
+      }else if (sales>=0&&sales<=500) {
+        total=sales*0.045;
+      }else if(sales<=1000){
+        total=sales*0.075;
+      }else if(sales<=10000){
+        total=sales*0.10;
+      }else {
+        total=sales*0.13;
+      }
+      break;
+
+    case "Plovdiv":
+      if (sales<0){
+        isTrue=false;
+        console.log("error");
+      }else if (sales>=0&&sales<=500) {
+        total=sales*0.055;
+      }else if(sales<=1000){
+        total=sales*0.08;
+      }else if(sales<=10000){
+        total=sales*0.12;
+      }else {
+        total=sales*0.145;
+      }
+      break;
+  
+    default:
+      isTrue=false;
+      console.log("error");
+      break;
+  }
+
+  if (isTrue) {
+    console.log(total.toFixed(2));
+  }
+}

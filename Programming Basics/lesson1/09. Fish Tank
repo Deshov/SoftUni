@@ -1,0 +1,11 @@
+function solve(input){
+    let length= Number(input[0]);
+    let width= Number(input[1]);
+    let heught= Number(input[2]);
+    let percentage= Number(input[3]);
+    
+    let volumeLitri=length*width*heught/1000
+    let total=volumeLitri-volumeLitri*percentage/100
+    
+    console.log(total);
+}

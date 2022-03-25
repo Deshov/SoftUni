@@ -1,0 +1,10 @@
+function solve(input){
+    let tax= Number(input[0]);
+    
+    let kecove=tax*0.6
+    let ekip=kecove*0.8
+    let topka = ekip/4
+    let aksesoari=topka/5
+
+    console.log(tax+kecove+ekip+topka+aksesoari);
+}

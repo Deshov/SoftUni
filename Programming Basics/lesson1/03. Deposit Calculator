@@ -1,0 +1,10 @@
+function solve(input){
+    let deposit= Number(input[0]);
+    let depositSrok= input[1];
+    let rate= Number(input[2]);
+
+    let procMesec=rate/12
+
+    let sum = deposit*depositSrok*procMesec/100
+    console.log(sum+deposit);
+}

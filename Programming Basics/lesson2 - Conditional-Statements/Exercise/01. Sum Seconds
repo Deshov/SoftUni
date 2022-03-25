@@ -1,0 +1,16 @@
+function greet(input){
+    
+    let a=Number(input[0]);
+    let b=Number(input[1]);
+    let c=Number(input[2]);
+
+    let total=a+b+c
+     let min=Math.floor(total/60)
+     let sec= total-min*60
+
+     if(sec<10){
+       console.log(`${min}:0${sec}`);
+     }else{
+      console.log(`${min}:${sec}`);
+     }
+    }

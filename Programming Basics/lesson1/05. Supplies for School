@@ -1,0 +1,9 @@
+function solve(input){
+    let himikalki= Number(input[0]);
+    let markeri= Number(input[1]);
+    let preparat= Number(input[2]);
+    let discount =Number(input[3]);
+
+    moneyTotal= (himikalki*5.8+markeri*7.2+preparat*1.2)*(1-discount/100)
+    console.log(moneyTotal);
+}

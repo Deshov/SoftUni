@@ -1,0 +1,28 @@
+function GodzillaVsKong(input){
+    let budjet = Number(input[0])
+    let statist = Number(input[1])
+    let priceClothes = Number(input[2])
+
+    let sumBudjet = budjet * 0.10
+    let totalPrice = 0
+
+    if (statist > 150){
+       totalPrice = statist * (priceClothes * 0.90)
+    }else {
+       totalPrice = statist * priceClothes
+    }
+
+     let totalClothesPrice = sumBudjet + totalPrice
+
+     let diff = Math.abs(totalClothesPrice - budjet)
+
+     if (totalClothesPrice > budjet) {
+         console.log("Not enough money!")
+         console.log(`Wingard needs ${diff.toFixed(2)} leva more.`)
+        
+     } else {
+         console.log("Action!")
+         console.log(`Wingard starts filming with ${diff.toFixed(2)} leva left.`)
+     }
+    
+}

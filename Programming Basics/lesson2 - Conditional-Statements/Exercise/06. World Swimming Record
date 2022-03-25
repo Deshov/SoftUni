@@ -1,0 +1,18 @@
+function greet(input){
+    
+    let rekordInSec=Number(input[0]);
+    let distanceInMeters=Number(input[1]);
+    let timeForMeterInSec=Number(input[2]);
+    
+    let delyInSec=Math.floor(distanceInMeters/15)*12.5
+
+    let ivanScore=(distanceInMeters*timeForMeterInSec+delyInSec).toFixed(2)
+
+    let diff=Math.abs(rekordInSec-ivanScore).toFixed(2)
+
+    if(ivanScore<rekordInSec){
+      console.log(`Yes, he succeeded! The new world record is ${ivanScore} seconds.`);
+    }else{
+      console.log(`No, he failed! He was ${diff} seconds slower.`);
+    }
+}

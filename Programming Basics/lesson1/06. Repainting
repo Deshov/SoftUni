@@ -1,0 +1,10 @@
+function solve(input){
+    let nailon= Number(input[0]);
+    let boq= Number(input[1]);
+    let razreditel= Number(input[2]);
+    let chasove =Number(input[3]);
+
+    let materiali= (nailon+2)*1.5+boq*1.1*14.5+razreditel*5+0.4
+    let trud = materiali*0.3*chasove
+    console.log(materiali+trud);
+}

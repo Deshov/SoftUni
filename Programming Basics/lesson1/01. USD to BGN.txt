@@ -1,0 +1,4 @@
+function change(input){
+	let val=input[0];
+  console.log(val*1.79549)
+}

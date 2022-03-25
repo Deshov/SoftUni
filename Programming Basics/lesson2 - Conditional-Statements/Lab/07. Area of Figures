@@ -1,0 +1,19 @@
+function greet(input){
+    let fig=input[0];
+    let a=Number(input[1]);
+    let b=Number(input[2]);
+
+     if (fig==="square") {
+       console.log((a*a).toFixed(3));
+     }
+     if (fig==="rectangle") {
+      console.log((a*b).toFixed(3));
+    }
+     if (fig==="circle") {
+      console.log((a*a*Math.PI).toFixed(3));
+    }
+
+    if (fig==="triangle") {
+      console.log((a*b/2).toFixed(3));
+    }
+  }

@@ -1,0 +1,43 @@
+function greet(input) {
+    let hourExam = Number(input[0]);
+    let minExam = Number(input[1]);
+    let hourStudent = Number(input[2]);
+    let minStudent = Number(input[3]);
+
+    let minutesExam = hourExam*60+minExam;
+    let minutesStudent = hourStudent*60+minStudent;
+
+    let diff=minutesStudent-minutesExam
+
+    if (diff<-30){
+        console.log("Early");
+    }else if(diff<=0){
+        console.log("On time");
+    }else{
+        console.log("Late");
+    }
+
+    if(Math.abs(minutesExam-minutesStudent)<60){
+        if(diff<0){
+            console.log(`${Math.abs(minutesExam-minutesStudent)} minutes before the start`);
+        }else if (diff>0){
+            console.log(`${Math.abs(minutesExam-minutesStudent)} minutes after the start`);
+        }
+    }else if(Math.abs(minutesExam-minutesStudent)>0){
+        let h=Math.floor(Math.abs(minutesExam-minutesStudent)/60);
+        let m=Math.abs(minutesExam-minutesStudent)-h*60
+
+        if(m<10){
+            m="0"+m
+        }
+
+        if(diff<0){
+            console.log(`${h}:${m} hours before the start`);
+        }else{
+            console.log(`${h}:${m} hours after the start`);
+        }
+
+    }
+    
+    
+}

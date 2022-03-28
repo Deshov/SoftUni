@@ -1,0 +1,39 @@
+function greet(input) {
+    let budget = Number(input[0]);
+    let season = input[1];
+    let place="Camp"
+    let dest="Bulgaria"
+    let price=0;
+
+   if(season==="winter")
+    place="Hotel"
+
+
+    if (budget<=100) {
+        switch (season) {
+            case "summer":
+                price=budget*0.3
+                break;
+            case "winter":
+                price=budget*0.7
+                break;
+        }        
+    }else if(budget<=1000){
+        dest="Balkans"
+        switch (season) {
+            case "summer":
+                price=budget*0.4
+                break;
+            case "winter":
+                price=budget*0.8
+                break;
+        }
+    }else{
+        dest="Europe"
+        place="Hotel"
+        price=budget*0.9
+    }
+
+    console.log(`Somewhere in ${dest}`);
+    console.log(`${place} - ${price.toFixed(2)}`);
+}

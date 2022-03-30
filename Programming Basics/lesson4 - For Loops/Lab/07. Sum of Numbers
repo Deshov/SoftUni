@@ -1,0 +1,10 @@
+function greet(input) {
+    let n = input[0]
+    let total=0;
+  for (let index = 0; index<n.length; index++) {
+      
+    
+    total+=Number(n[index])
+  }
+  console.log(`The sum of the digits is:${total}`);
+}

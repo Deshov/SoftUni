@@ -1,0 +1,15 @@
+function greet(input) {
+    let n1 = Number(input[0])
+    let n2 = Number(input[1])
+    let total=0;
+    let out=""
+
+  for (let i = 1; i<=1000; i++) {
+    if(i%10===7){
+        console.log(i);
+    }  
+    
+    
+  }
+ 
+}

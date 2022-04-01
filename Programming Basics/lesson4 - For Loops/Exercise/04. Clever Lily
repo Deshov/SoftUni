@@ -1,0 +1,27 @@
+function greet(input) {
+    let age = Number(input[0])
+    let price = Number(input[1])
+    let toyPrice = Number(input[2])
+    
+    let sum=0;
+    let toyCount=0;
+     
+    let cnt=0
+  for (let i = 1; i<=age; i++) {
+         if(i%2===0){
+             cnt+=1
+            sum=sum+(10*cnt)
+         }else{
+            toyCount+=1
+         }
+  }
+
+   sum=toyCount*toyPrice+sum-Math.floor(age/2)
+    let diff=Math.abs(sum-price)
+   
+    if(sum>=price){
+    console.log(`Yes! ${diff.toFixed(2)}`);
+   }else{
+    console.log(`No! ${diff.toFixed(2)}`);
+   }
+}

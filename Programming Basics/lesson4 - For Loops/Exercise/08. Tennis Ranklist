@@ -1,0 +1,28 @@
+function greet(input) {
+    let tournaments = Number(input[0]);
+    let points = Number(input[1]);
+    index=2;
+    let pointsThisYear=0
+    let wins=0
+    for (let i = index; i <=input.length; i++) {
+        let currGroup=input[i];
+
+        if(currGroup==="W"){
+            points+=2000;
+            wins+=1;
+            pointsThisYear+=2000;
+        }else if(currGroup==="F"){
+            points+=1200;
+            pointsThisYear+=1200;
+        }else if(currGroup==="SF"){
+            points+=720;
+            pointsThisYear+=720;
+        }
+        
+    }   
+    console.log(`Final points: ${points}`);
+    let avgPoints=pointsThisYear/tournaments;
+    console.log(`Average points: ${Math.floor(avgPoints)}`);
+    let winPerc=wins/tournaments*100;
+    console.log(`${winPerc.toFixed(2)}%`);
+}

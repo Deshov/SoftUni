@@ -1,0 +1,26 @@
+function walking(input){
+    let target = input[0];
+
+    let index = 1;
+    let command = input[index];
+    index++;
+
+    let counter=0;
+    while(command !== target){
+        if(command==="No More Books"){
+            break;
+        }
+        counter+=1
+        
+        command = input[index];
+        index++;
+    }
+
+    if (command === target){
+        
+        console.log(`You checked ${counter} books and found it.`);
+    }else{
+        console.log(`The book you search is not here!`);
+        console.log(`You checked ${counter} books.`);
+    }
+}

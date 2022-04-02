@@ -1,0 +1,23 @@
+function greet(input) {
+    let name = input[0];
+    let points = Number(input[1]);
+    let jury = Number(input[2]);
+    index=3;
+
+    for (let i = index; i < input.length; i+=2) {
+        let currName=input[i];
+        let currPoints=Number(input[i+1]);
+        let nameLength=currName.length;
+        let actorPoints=nameLength*currPoints/2
+        points=points+actorPoints
+        if (points>1250.5) break
+        
+    }   
+
+    if (points>1250.5) {
+        console.log(`Congratulations, ${name} got a nominee for leading role with ${points.toFixed(1)}!`);
+    }else{
+        let diff=1250.5-points;
+        console.log(`Sorry, ${name} you need ${diff.toFixed(1)} more!`);
+    }
+}

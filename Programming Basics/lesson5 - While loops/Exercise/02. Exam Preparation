@@ -1,0 +1,43 @@
+function walking(input){
+    let index=0;
+    let target = Number(input[index]);
+    index++;    
+
+    let task=input[index]
+    index++
+    let mark=Number(input[index])
+    index++
+
+    let counter=0;
+    let totalScore=0;
+    let totalCounter=0;
+    let lastProblem;
+    while(task !== "Enough"){
+        totalScore=totalScore+mark;
+        totalCounter+=1
+        if(mark<=4){
+            counter++
+        }
+
+        if(counter===target){
+            console.log(`You need a break, ${counter} poor grades.`);
+            break;
+        }
+        lastProblem=task;
+        task=input[index];
+        index++;
+
+        mark = Number(input[index]);
+        index++;
+    }
+
+    if (task === "Enough"){
+        let score=totalScore/totalCounter;
+
+        console.log(`Average score: ${score.toFixed(2)}`);
+        console.log(`Number of problems: ${totalCounter}`);
+        console.log(`Last problem: ${lastProblem}`);
+    }
+    
+
+}

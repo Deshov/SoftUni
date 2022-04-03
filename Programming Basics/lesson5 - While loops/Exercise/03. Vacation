@@ -1,0 +1,52 @@
+function walking(input){
+    let index=0;
+    let target = Number(input[index]);
+    index++;    
+
+    let currentBalance=Number(input[index])
+    index++
+
+    let action=input[index]
+    index++
+    
+    let actionSum=Number(input[index])
+    index++
+    
+    let daysSpend=0;
+    let days=0;
+    let flag=true;
+    while(currentBalance<target){
+        days++
+        if(action==="save"){
+            daysSpend=0;
+            currentBalance+=actionSum
+        }else{
+            daysSpend++;
+            currentBalance-=actionSum
+        }
+
+        if(currentBalance<0){
+            currentBalance=0
+        }
+
+        if(daysSpend===5){
+            flag=false;
+            console.log(`You can't save the money.`);
+            console.log(`${days}`);
+            break
+        }
+
+        action=input[index]
+        index++
+
+        actionSum=Number(input[index])
+        index++
+
+        
+    }
+
+    if(flag){
+        console.log(`You saved the money for ${days} days.`);      
+    }
+    
+}

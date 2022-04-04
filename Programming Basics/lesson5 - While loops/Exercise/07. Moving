@@ -1,0 +1,35 @@
+function cake(input) {
+    let index = 0;
+    let a = Number(input[index]);
+    index++;
+    let b = Number(input[index]);
+    index++;
+    let c = Number(input[index]);
+    index++;
+    let area=a*b*c;
+
+    let command=input[index]
+    index++
+
+    let currentArea=0;
+    let print=true;
+    let diff;
+    while (command!="Done") {
+        command=Number(command);
+        currentArea+=command;
+
+        if(currentArea>area){
+            diff=Math.abs(currentArea-area)
+            console.log(`No more free space! You need ${diff} Cubic meters more.`);
+            print=false;
+            break;
+        }
+
+        command=input[index];
+        index++
+    }
+    if(print){
+        diff=Math.abs(currentArea-area)
+        console.log(`${diff} Cubic meters left.`);
+    }
+}

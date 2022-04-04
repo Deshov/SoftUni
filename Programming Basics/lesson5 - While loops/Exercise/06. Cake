@@ -1,0 +1,32 @@
+function cake(input) {
+    let index = 0;
+    let a = Number(input[index]);
+    index++;
+    let b = Number(input[index]);
+    index++;
+    let area=a*b;
+
+    let command=input[index]
+    index++
+    let currentPieces=0;
+    let print=true;
+    let diff;
+    while (command!="STOP") {
+        command=Number(command);
+        currentPieces+=command;
+
+        if(currentPieces>area){
+            diff=Math.abs(currentPieces-area)
+            console.log(`No more cake left! You need ${diff} pieces more.`);
+            print=false;
+            break;
+        }
+
+        command=input[index];
+        index++
+    }
+    if(print){
+        diff=Math.abs(currentPieces-area)
+        console.log(`${diff} pieces are left.`);
+    }
+}

@@ -1,0 +1,17 @@
+function greet(input) {
+    let n1=input[0];
+    
+    let index=1
+    let sum=0;
+   for (let i = index; i < input.length; i++) {
+       let currNumb = Number(input[i]);
+
+       sum+=currNumb;
+
+       if(sum>=n1){
+           console.log(sum);
+           break;
+       }
+       
+   }
+}

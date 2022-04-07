@@ -1,0 +1,10 @@
+function greet(input) {
+    let n1=input[0];
+    
+    let index=1
+    let sum=0;
+   for (let i = index; i <=n1; i=2*i+1) {
+       console.log(i);
+       
+   }
+}

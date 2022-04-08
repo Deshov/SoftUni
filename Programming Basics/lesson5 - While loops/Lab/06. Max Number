@@ -1,0 +1,22 @@
+function greet(input) {
+    let n1=Number(input[0]);
+    
+    let maxNumb=input[0];
+    let sum=0;
+    let flag=true
+   for (let i = 0; i <input.length; i++) {
+       if (input[i]==="Stop") {
+           console.log(maxNumb);
+           flag=false
+           break;
+       }else{
+           let currSum=Number(input[i])
+           if(currSum>maxNumb){
+               maxNumb=currSum
+           }
+       }
+       
+   }
+   if(flag)
+   console.log(maxNumb);
+}

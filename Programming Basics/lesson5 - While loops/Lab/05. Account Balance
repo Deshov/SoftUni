@@ -1,0 +1,21 @@
+function greet(input) {
+    let n1=input[0];
+    
+    let index=0
+    let sum=0;
+   for (let i = index; i <input.length; i++) {
+       if (input[i]==="NoMoreMoney") {
+           break;
+       }else{
+           let currSum=Number(input[i])
+           if(currSum<=0){
+               console.log("Invalid operation!");
+           }else{
+           sum+=currSum;
+           console.log(`Increase: ${currSum.toFixed(2)}`);
+           }
+       }
+       
+   }
+   console.log(`Total: ${sum.toFixed(2)}`);
+}

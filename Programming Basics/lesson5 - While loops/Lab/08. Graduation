@@ -1,0 +1,23 @@
+function greet(input) {
+    let name=input[0];
+    
+    let index=1
+    let cnt=0;
+    let total=0;
+    let flag=true
+   for (let i = index; i <input.length; i++) {
+       let ocenka=Number(input[i])
+       cnt+=1
+       if(ocenka<4){
+        flag=false;
+        console.log(`${name} has been excluded at ${cnt} grade`);
+            break;
+            
+       }else{
+           total+=ocenka
+       }
+   }
+   let avg=total/cnt;
+   if(flag)
+   console.log(`${name} graduated. Average grade: ${avg.toFixed(2)}`);
+}

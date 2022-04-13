@@ -1,0 +1,22 @@
+function barcodeGen(input) {
+    let a=Number(input[0]);
+    let b=Number(input[1]);
+    
+    let output=[]
+    for (let i = a; i <= b; i++) {
+       let arr=i.toString().split("")
+       let notEqual=true
+       for (let n of arr) {
+           if(Number(n)%2==0){
+               notEqual=false;
+               continue
+           }
+       }
+       if(notEqual){
+           output.push(arr.join(""))
+       }
+    }
+    console.log(output.join(" "));
+
+   
+}

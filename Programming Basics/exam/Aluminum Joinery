@@ -1,0 +1,64 @@
+function alumin(input) {
+    let index = 0;
+    let qty =Number(input[index]);
+    index++;
+    let type = input[index];
+    index++;
+    let delivery = input[index];
+    index++;
+
+    let sum=0;
+    if(qty>=10){
+        switch (type) {
+            case "90X130":
+                if(qty>60){
+                    sum=qty*110*0.92
+                }else if(qty>30){
+                    sum=qty*110*0.95
+                }else{
+                    sum=qty*110
+                }        
+                break;
+
+            case "100X150":
+                if(qty>80){
+                    sum=qty*140*0.9
+                }else if(qty>40){
+                    sum=qty*140*0.94
+                }else{
+                    sum=qty*140
+                }        
+                break;
+
+            case "130X180":
+                if(qty>50){
+                    sum=qty*190*0.88
+                }else if(qty>20){
+                    sum=qty*190*0.93
+                }else{
+                    sum=qty*190
+                }        
+                break;
+
+            case "200X300":
+                if(qty>50){
+                    sum=qty*250*0.86
+                }else if(qty>25){
+                    sum=qty*250*0.91
+                }else{
+                    sum=qty*250
+                }        
+                break;
+        
+        }
+        if(delivery==="With delivery"){
+            sum+=60
+        }
+        if(qty>99){
+            sum=sum*0.96
+        }
+        console.log(`${sum.toFixed(2)} BGN`);
+    }else{
+        console.log(`Invalid order`);
+    }    
+}

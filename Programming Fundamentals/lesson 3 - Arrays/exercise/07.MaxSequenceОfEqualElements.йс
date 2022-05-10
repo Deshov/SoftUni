@@ -1,0 +1,25 @@
+function foo(array){
+    
+    let sequence=[];
+    let tmpArray=[]
+   for (let i = 0; i < array.length; i++) {
+       if (array[i]==array[i+1]) {
+         
+          tmpArray=[]
+          for (let j = i; j < array.length; j++) {
+               if(array[i]==array[j]){
+                  
+                    tmpArray.push(array[j])
+               }else{
+                    break
+               }
+               if (tmpArray.length>sequence.length) {
+                   sequence=tmpArray 
+               }  
+          }
+       }
+   }
+
+   console.log(sequence.join(" "));
+  
+}

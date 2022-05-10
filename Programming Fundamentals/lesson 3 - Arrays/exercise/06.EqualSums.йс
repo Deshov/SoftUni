@@ -1,0 +1,28 @@
+function foo(array){
+ let flag=false;
+ let index;
+   for (let i = 0; i < array.length; i++) {
+        let currVal=array[i]
+        let sumLeft=0;        
+        let sumRight=0;        
+        for (let j = i+1; j < array.length; j++) {
+             sumRight+=array[j]
+        }
+
+        for (let k = 0; k < i; k++) {
+             sumLeft+=array[k]
+        }
+        
+        if(sumLeft==sumRight){
+            index=i;
+            flag=true
+             break
+        }
+   }
+
+   if(flag){
+        console.log(index);
+   }else{
+        console.log("no");
+   }
+}

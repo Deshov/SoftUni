@@ -1,5 +1,5 @@
 function roadRadar(speed,zone){
-    let limit;
+    let limit=0;
     let status;
     let difference;
     switch (zone) {
@@ -15,18 +15,17 @@ function roadRadar(speed,zone){
             limit=50;
             break;
 
-        case "residential ":
+        case "residential":
             limit=20;
             break;
     
         }
 
-    
     difference=Number(speed)-Number(limit);
 
-    if (difference>0&&difference<20) {
+    if (difference>0&&difference<=20) {
         status="speeding"
-    }else if(difference<40){
+    }else if(difference<=40){
         status="excessive speeding"
     }else {
         status="reckless driving"
@@ -38,4 +37,3 @@ function roadRadar(speed,zone){
     }
 }
 
-roadRadar(21,'residential')

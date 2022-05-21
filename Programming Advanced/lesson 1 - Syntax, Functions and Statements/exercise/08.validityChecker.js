@@ -10,9 +10,7 @@ function validitiCheck(x1,y1,x2,y2){
         }
         
     }
-    calcValidity(x1,y1,0,0)
-    calcValidity(x2,y2,0,0)
-    calcValidity(x1,y1,x2,y2)
+    calcValidity(x1,0,y1,0)
+    calcValidity(0,x2,0,y2)
+    calcValidity(x1,y2,y1,y2)
 }
-// validitiCheck(3,0,0,4)
-validitiCheck(2,1,1,1)
